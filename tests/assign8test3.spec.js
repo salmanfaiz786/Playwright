@@ -1,4 +1,3 @@
-Test3:
 const{test, expect} = require('@playwright/test')
 
 test('My First test', async({page}) => {
