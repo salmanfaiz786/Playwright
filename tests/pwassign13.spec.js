@@ -1,21 +1,25 @@
 const{test, expect} = require('@playwright/test')
 
-test('My First test', async({page}) => {
-    await page.goto('https://ecommerce-playground.lambdatest.io/')
-    await page.getByRole('button', { name: 'My account' }).hover();
-    await page.getByRole('link', { name: 'Register', exact: true }).click();
-    await page.getByPlaceholder('First Name').fill('Salman');
-    await page.getByPlaceholder('Last Name').fill('Faiz');
-    await page.getByPlaceholder('E-Mail').fill('salman.faiz70@gmail.com');
-    await page.getByPlaceholder('Telephone').fill('923454088840');
-    await page.getByPlaceholder('Password', { exact: true}).fill('P@ss1234');
-    await page.getByPlaceholder('Password Confirm' , {exact: true}).fill('P@ss1234');
-    await page.getByText('I have read and agree to the').click();
-    await expect( page.getByRole('button', { name: 'Continue' })).toBeVisible();
-    await page.getByRole('button', { name: 'Continue' }).click();
-    await expect (page.getByRole('heading', {name: 'Your Account Has Been Created!'})).toHaveText('Your Account Has Been Created!');
-    await page.waitForTimeout(5000);
-})
+test.describe('User Registration Suite', (async)=>{
+
+    test('My First test', async({page}) => {
+        await page.goto('https://ecommerce-playground.lambdatest.io/')
+        await page.getByRole('button', { name: 'My account' }).hover();
+        await page.getByRole('link', { name: 'Register', exact: true }).click();
+        await page.locator(`//input[@name = 'firstname']`).fill('Salman');
+        await page.getByPlaceholder('Last Name').fill('Faiz');
+        await page.getByPlaceholder('E-Mail').fill('salman.faiz123@gmail.com');
+        await page.getByPlaceholder('Telephone').fill('923454088840');
+        await page.getByPlaceholder('Password', { exact: true}).fill('P@ss1234');
+        await page.getByPlaceholder('Password Confirm' , {exact: true}).fill('P@ss1234');
+        await page.getByText('I have read and agree to the').click();
+        await expect( page.getByRole('button', { name: 'Continue' })).toBeVisible();
+        await page.getByRole('button', { name: 'Continue' }).click();
+        await expect (page.getByRole('heading', {name: 'Your Account Has Been Created!'})).toHaveText('Your Account Has Been Created!');
+        console.log("test")
+    })
+
+} )
 
 
 
