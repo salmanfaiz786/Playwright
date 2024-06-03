@@ -1,5 +1,3 @@
-const{test, expect} = require('@playwright/test')
-
 test.describe('User Registration Suite', (async)=>{
 
     test('My First test', async({page}) => {
@@ -16,7 +14,7 @@ test.describe('User Registration Suite', (async)=>{
         await expect( page.getByRole('button', { name: 'Continue' })).toBeVisible();
         await page.getByRole('button', { name: 'Continue' }).click();
         await expect (page.getByRole('heading', {name: 'Your Account Has Been Created!'})).toHaveText('Your Account Has Been Created!');
-        console.log("test")
+        await page.waitForTimeout(5000);
     })
 
 } )
