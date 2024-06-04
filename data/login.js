@@ -1,16 +1,32 @@
 module.exports=[{
 
 websiteURL : "https://ecommerce-playground.lambdatest.io/",
-firstusername : "Salman",
-Lastusername : "Faiz",
-userpassword: "P@ss1234",
-email: "salman.faiz777@gmail.com"
+loginEmail : "salman.faiz777@gmail.com",
+loginPassword: "P@ss1234"
 
 },
 
 {
-firstusername : "salman1",
-password: "P@ss1234"
+    loginEmail : "osama.altaf544456@gmail.com",
+    loginPassword: "P@ss1234"
+
+},
+
+{
+    loginEmail : "farhan.saleem544456@gmail.com",
+loginPassword: "P@ss1234"
+
+},
+
+{
+    loginEmail : "farrukh.hussain544456@gmail.com",
+loginPassword: "P@ss1234"
+
+},
+
+{
+    loginEmail : "zubair.shahid544456@gmail.com",
+    loginPassword: "P@ss1234"
 
 }
 ]
