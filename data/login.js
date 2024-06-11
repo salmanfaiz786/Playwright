@@ -1,4 +1,4 @@
-module.exports=[{
+module.exports= login [{
 
 websiteURL : "https://ecommerce-playground.lambdatest.io/",
 loginEmail : "salman.faiz777@gmail.com",
