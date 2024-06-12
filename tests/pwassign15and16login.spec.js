@@ -1,4 +1,4 @@
-import logindata from "../data/register"
+import logindata from "../data/login"
 const{test, expect} = require('@playwright/test')
 
 test.describe('User AccountLogin Suite', (async)=>{
@@ -27,7 +27,7 @@ test.describe('User AccountLogin Suite', (async)=>{
 
         test.skip('login with username and without password', async({page})=>{
 
-            await page.getByPlaceholder('E-Mail Address').fill(logindata[0].email);
+            await page.getByPlaceholder('E-Mail Address').fill(logindata[0].email);;
             await page.getByPlaceholder('Password', { exact: true}).fill('');
             await page.getByRole('button', { name: 'Login' }).click()
             await expect(page.getByText('Warning: No match for E-Mail')).toBeVisible();
