@@ -1,6 +1,7 @@
 const {test, expect, chromium} = require ("@playwright/test");
 const LoginPage1 = require ('../../pages/LoginPage');
 const MyAccount = require ('../../pages/myAccount');
+const applePage1 = require ('../../pages/applePage');
 
 let browser;
 let context;
@@ -10,7 +11,7 @@ let MegaPage;
       browser = await chromium.launch({ headless: false });
       context = await browser.newContext();
       MegaPage = await context.newPage();
-      console.log("Before ALl");
+      console.log("Before All");
    
    });
 
@@ -32,7 +33,16 @@ test.describe('Mega Menu', ()=>{
         await myAccount.mouseHover();
         await myAccount.appleAvailability();
         await myAccount.appleClick();
-})
+        })
+
+
+    test('Apple Page tests', async()=>{
+        const applePage = new applePage1(MegaPage);
+        await applePage.titleCheck();
+        await applePage.price();
+        await applePage.minimumPriceCheck();
+        await applePage.colorCheck();
+        })
 
 
 })
