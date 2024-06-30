@@ -3,5 +3,5 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-LoginAuth
-global-setup
+LoginAuth.json
+global-setup.js
