@@ -33,7 +33,10 @@ class LoginPage extends BasePage{
         async clickLogin(){
 
             await this.submit.click();
+            await page.context().storageState({path:"./LoginAuth.json"});
         }
+
+        
 
 }
 

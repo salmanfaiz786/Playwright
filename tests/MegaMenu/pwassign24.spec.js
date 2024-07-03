@@ -20,24 +20,7 @@ let MegaPage;
 
 test.describe('Mega Menu', ()=>{
 
-    // test.skip('login to WebSite', async()=>{
-    //     const megaLogin = new LoginPage1(MegaPage);
-    //     await megaLogin.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");
-    //     // await loginPage.mouseHover();
-    //     await megaLogin.emailField();
-    //     await megaLogin.PassField();
-    //     await megaLogin.clickLogin();
-
-
-    //     const megaLogin = new LoginPage1(MegaPage);
-    //     await megaLogin.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");
-    //     // await loginPage.mouseHover();
-    //     await megaLogin.emailField();
-    //     await megaLogin.PassField();
-    //     await megaLogin.clickLogin();
-        
-    // })
-
+    
     test('Apple option assertions', async()=>{
         const myAccount = new MyAccount(MegaPage);
         await myAccount.mouseHover();
